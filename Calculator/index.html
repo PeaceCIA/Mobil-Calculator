@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Calculator</title>
+</head>
+<style>
+    body {
+ background-color: #F5F5DC;
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+ margin: 0;
+ padding: 0;
+ min-height: 100vh;
+}
+
+.phone {
+ width: 290px;
+ height: 550px;
+ background-color: black;
+ border-radius: 10px;
+ margin: 50px auto;
+ position: relative;
+}
+
+.display {
+ width: 85%;
+ height: 100px;
+ background-color: #000000;
+ color: white;
+ font-size: 40px;
+ text-align: right;
+ padding: 20px;
+ padding: 40px 20px 0;
+ margin: 30px auto 10px;
+ border-radius: 10px;
+}
+
+.buttons {
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ grid-gap: 10px;
+ padding: 10px;
+}
+
+button {
+ width: 60px;
+ height: 60px;
+ border-radius: 50%;
+ font-size: 20px;
+ border: none;
+ cursor: pointer;
+}
+
+.gray {
+ background-color: #555555;
+ color: white;
+}
+
+#zero{
+ text-align: left;
+ padding-left: 25px; 
+ width: 130px;
+ height: 60px;
+ border-radius: 30px;
+ grid-column: span 2;
+}
+
+.orange {
+ background-color: orange;
+ color: white;
+}
+
+    /* media query */
+
+@media (max-width: 400px) {
+    .phone {
+        width: 90vw;
+        height: 80vh;
+        margin: 10vh auto;
+    }
+
+    .display {
+        height: 15vh;
+        font-size: 12vw;
+        padding: 3vh 3vw 0;
+    }
+
+    .buttons {
+        grid-gap: 1.5vw;
+        padding: 1.5vw;
+    }
+
+    button {
+        width: 18vw;
+        height: 18vw;
+        font-size: 5vw;
+    }
+
+    #zero {
+        width: 38.5vw;
+        height: 18vw;
+        padding-left: 6vw;
+    }
+}
+
+</style>
+
+
+<body>
+    <div class="phone">
+         <div class="display">1,600,000</div>
+         <div class="buttons">
+          <button class="gray">AC</button>
+          <button class="gray">+/-</button>
+          <button class="gray">%</button>
+          <button class="orange">/</button>
+          <button class="gray">7</button>
+          <button class="gray">8</button>
+          <button class="gray">9</button>
+          <button class="orange">X</button>
+          <button class="gray">4</button>
+          <button class="gray">5</button>
+          <button class="gray">6</button>
+          <button class="orange">-</button>
+          <button class="gray">1</button>
+          <button class="gray">2</button>
+          <button class="gray">3</button>
+          <button class="orange">+</button>
+          <button class="gray" id="zero">0</button>
+          <button class="gray" style="font-size: xx-large;">.</button>
+          <button class="orange">=</button>
+         </div>
+        </div>
+</body>
+</html>
